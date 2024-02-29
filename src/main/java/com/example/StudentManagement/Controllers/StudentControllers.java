@@ -19,23 +19,4 @@ public class StudentControllers {
         return newStudent.getId();
     }
 
-    Student getStudent(String id){
-        Student student = students.get(id);
-        if(student !=null) return student;
-        return null;
-    }
-
-    List<Student> getAllStudentsOfAUniversity(String university){
-        List<Student>allStudents = new ArrayList<>();
-
-        for(Map.Entry<String, Student>entry:students.entrySet()){
-            Student stu = entry.getValue();
-            if(stu.getUniversity().equals(university)){
-                allStudents.add(stu);
-            }
-        }
-
-        return allStudents;
-    }
-
 }

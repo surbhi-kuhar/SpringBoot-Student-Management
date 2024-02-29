@@ -20,17 +20,5 @@ public class MainRunningClass {
         String id = studentControllers.createEmployee(student);
         return id;
     }
-
-    @GetMapping("/get/{id}")
-    public Student get(@PathVariable String id){
-        Student student = studentControllers.getStudent(id);
-        return student;
-    }
-
-
-    @GetMapping("/getall/{university}")
-    public List<Student> getAll(@PathVariable String university){
-        return studentControllers.getAllStudentsOfAUniversity(university);
-    }
-
+    
 }
