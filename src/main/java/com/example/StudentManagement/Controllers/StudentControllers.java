@@ -19,4 +19,10 @@ public class StudentControllers {
         return newStudent.getId();
     }
 
+    Student getStudent(String id){
+        Student student = students.get(id);
+        if(student !=null) return student;
+        return null;
+    }
+
 }

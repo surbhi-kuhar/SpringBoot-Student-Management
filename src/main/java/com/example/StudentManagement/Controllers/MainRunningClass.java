@@ -21,4 +21,10 @@ public class MainRunningClass {
         return id;
     }
 
+    @GetMapping("/get/{id}")
+    public Student get(@PathVariable String id){
+        Student student = studentControllers.getStudent(id);
+        return student;
+    }
+
 }
