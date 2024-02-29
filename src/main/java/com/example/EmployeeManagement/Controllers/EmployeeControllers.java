@@ -3,6 +3,8 @@ package com.example.EmployeeManagement.Controllers;
 import com.example.EmployeeManagement.Models.User;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +17,12 @@ public class EmployeeControllers {
         User newUser = new User(user.getName(),user.getAge());
         users.put(newUser.getId(), newUser);
         return newUser.getId();
+    }
+
+    User getEmp(String id){
+        User user = users.get(id);
+        if(user!=null) return user;
+        return null;
     }
 
 }

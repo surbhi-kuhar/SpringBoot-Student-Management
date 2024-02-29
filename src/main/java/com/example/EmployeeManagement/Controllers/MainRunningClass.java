@@ -3,6 +3,8 @@ package com.example.EmployeeManagement.Controllers;
 import com.example.EmployeeManagement.Models.User;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/employee")
 public class MainRunningClass {
@@ -18,4 +20,11 @@ public class MainRunningClass {
         String id = employeeControllers.createEmployee(user);
         return id;
     }
+
+    @GetMapping("/get/{id}")
+    public User get(@PathVariable String id){
+        User user = employeeControllers.getEmp(id);
+        return user;
+    }
+
 }
