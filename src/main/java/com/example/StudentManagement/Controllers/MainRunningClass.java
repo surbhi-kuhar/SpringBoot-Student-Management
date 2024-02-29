@@ -27,4 +27,10 @@ public class MainRunningClass {
         return student;
     }
 
+    @GetMapping("/getall/{university}")
+    public List<Student> getAll(@PathVariable String university){
+        return studentControllers.getAllStudentsOfAUniversity(university);
+    }
+
+
 }

@@ -25,4 +25,17 @@ public class StudentControllers {
         return null;
     }
 
+    List<Student> getAllStudentsOfAUniversity(String university){
+        List<Student>allStudents = new ArrayList<>();
+
+        for(Map.Entry<String, Student>entry:students.entrySet()){
+            Student stu = entry.getValue();
+            if(stu.getUniversity().equals(university)){
+                allStudents.add(stu);
+            }
+        }
+
+        return allStudents;
+    }
+
 }
