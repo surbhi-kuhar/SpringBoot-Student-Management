@@ -1,4 +1,4 @@
-package com.example.EmployeeManagement.Models;
+package com.example.StudentManagement.Models;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,9 +8,11 @@ import java.security.SecureRandom;
 @Getter
 @Setter
 @NoArgsConstructor
-public class User {
+public class Student {
     private String id;
     private String name;
+    private String adhar;
+    private String university;
     private int age;
 
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -28,11 +30,12 @@ public class User {
     }
 
 
-    public User(String name, int age) {
+    public Student(String name, int age, String adhar, String university) {
         this.id = generateRandomId(10);
         this.name = name;
         this.age = age;
+        this.adhar = adhar;
+        this.university = university;
     }
-
 
 }
