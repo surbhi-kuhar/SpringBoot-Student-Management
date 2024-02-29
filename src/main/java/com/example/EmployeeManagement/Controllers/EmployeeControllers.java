@@ -25,4 +25,14 @@ public class EmployeeControllers {
         return null;
     }
 
+    List<User> getAllEmp(){
+        List<User>allEmps = new ArrayList<>();
+
+        for(Map.Entry<String,User>entry:users.entrySet()){
+            allEmps.add(entry.getValue());
+        }
+
+        return allEmps;
+    }
+
 }

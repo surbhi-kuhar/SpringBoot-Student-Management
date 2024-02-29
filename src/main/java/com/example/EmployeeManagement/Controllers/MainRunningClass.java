@@ -27,4 +27,10 @@ public class MainRunningClass {
         return user;
     }
 
+
+    @GetMapping("/getall")
+    public List<User> getAll(){
+        return employeeControllers.getAllEmp();
+    }
+
 }
